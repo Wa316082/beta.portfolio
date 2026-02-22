@@ -4,17 +4,17 @@ import {CiLinkedin} from "react-icons/ci";
 import Link from "next/dist/client/link";
 import {FaFacebookF} from "react-icons/fa";
 import {LuInstagram} from "react-icons/lu";
-import {FaXTwitter} from "react-icons/fa6";
+import {FaCode, FaCodeBranch, FaDatabase, FaXTwitter} from "react-icons/fa6";
 import {IoIosArrowRoundForward} from "react-icons/io";
 export default function Home() {
   return (
       <div className="min-h-screen relative bg-grid-pattern">
-          <div className="absolute top-4 right-4">
+          <div className="top-4 right-4 z-30 fixed">
               <ThemeToggle/>
           </div>
           <div className='container mx-auto px-3 py-20 text-center'>
             <div className='grid grid-cols-11 gap-6'>
-                <div className='col-span-3 relative p-0.5 rounded-lg overflow-hidden  min-h-96'>
+                <div className='lg:col-span-3 sm:col-span-5 col-span-11 p-0.5 rounded-lg overflow-hidden sm:sticky top-20 relative h-fit'>
                     <div
                         className="absolute inset-0 rounded-lg animate-spin-slow
                           bg-[conic-gradient(from_0deg,transparent_0%,#13fdfd_10%,#139bfd_20%,transparent_30%)]
@@ -120,64 +120,116 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className='col-span-8'>
+                <div className='lg:col-span-8 sm:col-span-6 col-span-11 '>
                 {/*    here will go topbar*/}
-                    <div className='bg-linear-100 from-50% from-[#e2e8ec] to-[#ffffff] dark:from-[#010D16] dark:to-[#052B48] rounded-lg p-2 border-2 fixed-top w-full z-20 shadow-md'>
-                        <div className='flex items-center justify-between'>
+                    <div className='bg-linear-100 from-50% from-[#e2e8ec] to-[#ffffff] dark:from-[#010D16] dark:to-[#052B48] rounded-lg p-2 border-2 w-full z-20 shadow-md'>
+                        <div className='flex items-center justify-between flex-wrap gap-4'>
                             <div
-                                className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none">
-                                <button className="relative z-10 custom-gradient rounded-lg px-4 py-3 cursor-pointer  custom-shadow hover:text-blue-500">
+                                className="relative overflow-hidden p-0.5 custom-shadow rounded-xl before:content-[''] before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none">
+                                <button className="relative z-10 custom-gradient rounded-lg px-4 py-3 cursor-pointer hover:text-blue-500">
                                     About Me
                                 </button>
                             </div>
 
                             <div
-                                className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none">
-                                <button className="relative z-10 custom-gradient rounded-lg px-4 py-3 cursor-pointer custom-shadow hover:text-blue-500">
+                                className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] custom-shadow before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none">
+                                <button className="relative z-10 custom-gradient rounded-lg px-4 py-3 cursor-pointer hover:text-blue-500">
                                    Projects
                                 </button>
                             </div>
                             <div
-                                className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none">
-                                <button className="relative z-10 custom-gradient rounded-lg px-4 py-3 cursor-pointer custom-shadow hover:text-blue-500">
+                                className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] custom-shadow before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none">
+                                <button className="relative z-10 custom-gradient rounded-lg px-4 py-3 cursor-pointe hover:text-blue-500">
                                     Skills
                                 </button>
                             </div>
                             <div
-                                className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none">
-                                <button className="relative z-10 custom-gradient rounded-lg px-4 py-3 cursor-pointer custom-shadow hover:text-blue-500">
+                                className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] custom-shadow before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none">
+                                <button className="relative z-10 custom-gradient rounded-lg px-4 py-3 cursor-pointer hover:text-blue-500">
                                     Experience
                                 </button>
                             </div>
                             <div
-                                className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none">
-                                <button className="relative z-10 custom-gradient rounded-lg px-4 py-3 cursor-pointer custom-shadow hover:text-blue-500">
+                                className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] before:absolute custom-shadow before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none">
+                                <button className="relative z-10 custom-gradient rounded-lg px-4 py-3 cursor-pointer  hover:text-blue-500">
                                     Contact
                                 </button>
                             </div>
                             <div
-                                className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none">
-                                <button className="relative z-10 custom-gradient rounded-lg px-4 py-3 cursor-pointer custom-shadow hover:text-blue-500">
+                                className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] before:absolute custom-shadow before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none">
+                                <button className="relative z-10 custom-gradient rounded-lg px-4 py-3 cursor-pointer  hover:text-blue-500">
                                     Blogs
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div className='mt-4 text-left px-4 py-6 bg-linear-to-br  from-[#e2e8ec] to-[#ffffff] dark:from-[#010D16] dark:to-[#052B48] rounded-lg custom-shadow'>
-                        <h2 className='text-3xl text-gray-800 dark:text-gray-100 font-semibold mb-2'>Welcome to My Portfolio</h2>
-                        <p className='text-gray-600 dark:text-gray-400 mb-4'>I am a passionate software developer with expertise in web development, specializing in React, Next.js, and Node.js. With a strong background in building scalable and efficient applications, I thrive on solving complex problems and delivering high-quality solutions. Explore my projects and experience to see how I can contribute to your next venture.</p>
-                        <button
-                            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#139bfd] to-[#13fdfd] text-white rounded-lg custom-shadow hover:from-[#13fdfd] hover:to-[#139bfd] transition-colors duration-300"
-                        >
-                            View Projects
-                            <IoIosArrowRoundForward className="ml-2 text-lg" />
-                        </button>
+                    <div className='mt-4 text-left'>
+                        <p className='text-sm text-gray-600 dark:text-gray-300 mb-2 uppercase tracking-wide font-semibold'>
+                            About Me
+                        </p>
+                        <h2 className='text-3xl text-gray-800 dark:text-gray-100 font-semibold mb-2'>
+                            Building Innovative Solutions with Code
+                        </h2>
+                        <p className='text-gray-600 dark:text-gray-400 mb-4'>Hello, I am a passionate software developer with expertise in web development, specializing in React, Next.js, and Node.js. With a strong background in building scalable and efficient applications, I thrive on solving complex problems and delivering high-quality solutions. Explore my projects and experience to see how I can contribute to your next venture.</p>
+                    </div>
+                    <div className='mt-8 text-left'>
+                        <h2 className='text-3xl text-gray-800 dark:text-gray-100 font-semibold mb-2'>
+                            What I Do?
+                        </h2>
+                        <p className='text-gray-600 dark:text-gray-400 mb-4'>I specialize in creating dynamic and responsive web applications using modern technologies. My expertise includes front-end development with React and Next.js, as well as back-end development with Node.js. I am passionate about building innovative solutions that enhance user experiences and drive business growth.</p>
+                        <div className='grid grid-cols-2 gap-4'>
+                            <div className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none custom-shadow">
+                                <div className='relative h-full bg-linear-to-br from-[#e2e8ec] to-[#ffffff] dark:from-[#010D16] dark:to-[#052B48] rounded-lg p-4 '>
+                                    <div className="flex items-center justify-center w-12 h-12 text-2xl rounded-full bg-gradient-to-tr from-[#13fdfd] to-[#139bfd] text-white mb-3 shadow-[0_0_10px_5px_rgba(98,226,255,0.6)]">
+                                        <FaCode />
+                                    </div>
+                                    <h3 className='text-2xl text-gray-800 dark:text-gray-100 font-semibold mb-2'>Web Development</h3>
+                                    <p className='text-gray-600 dark:text-gray-400'>
+                                        Building responsive and user-friendly websites and applications using React, Next.js, and Node.js.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none custom-shadow">
+                                <div className='relative h-full bg-linear-to-br from-[#e2e8ec] to-[#ffffff] dark:from-[#010D16] dark:to-[#052B48] rounded-lg p-4 '>
+                                    <div className=" flex items-center justify-center w-12 h-12 text-2xl rounded-full bg-gradient-to-tr from-[#13fdfd] to-[#139bfd] text-white mb-3 shadow-[0_0_10px_5px_rgba(98,226,255,0.6)]">
+                                        <FaCodeBranch />
+                                    </div>
+                                    <h3 className='text-2xl text-gray-800 dark:text-gray-100 font-semibold mb-2'>API Development</h3>
+                                    <p className='text-gray-600 dark:text-gray-400'>
+                                        Designing and implementing robust APIs using Node.js, PHP with Laravel, and Python framework to enable seamless integration and data exchange.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none custom-shadow">
+                                <div className='relative h-full bg-linear-to-br from-[#e2e8ec] to-[#ffffff] dark:from-[#010D16] dark:to-[#052B48] rounded-lg p-4 '>
+                                    <div className=" flex items-center justify-center w-12 h-12 text-2xl rounded-full bg-gradient-to-tr from-[#13fdfd] to-[#139bfd] text-white mb-3 shadow-[0_0_10px_5px_rgba(98,226,255,0.6)]">
+                                        <FaDatabase />
+                                    </div>
+                                    <h3 className='text-2xl text-gray-800 dark:text-gray-100 font-semibold mb-2'>Database Management</h3>
+                                    <p className='text-gray-600 dark:text-gray-400'>
+                                        Proficient in managing databases using MySQL, PgSql, and MongoDB, ensuring efficient data storage and retrieval for applications.
+                                    </p>
+                                </div>
+                            </div>
+                                <div className="relative overflow-hidden p-0.5 rounded-xl before:content-[''] before:absolute before:inset-0 before:rounded-xl before:bg-linear-to-bl before:from-[#13fdfd] before:to-[#139bfd] before:opacity-0 before:scale-95 before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-100 before:pointer-events-none custom-shadow">
+                                    <div className='relative h-full bg-linear-to-br from-[#e2e8ec] to-[#ffffff] dark:from-[#010D16] dark:to-[#052B48] rounded-lg p-4 '>
+                                        <div className="flex items-center justify-center w-12 h-12 text-2xl rounded-full bg-gradient-to-tr from-[#13fdfd] to-[#139bfd] text-white mb-3 shadow-[0_0_10px_5px_rgba(98,226,255,0.6)]">
+                                            <FaXTwitter />
+                                        </div>
+                                        <h3 className='text-2xl text-gray-800 dark:text-gray-100 font-semibold mb-2'>Version Control</h3>
+                                        <p className='text-gray-600 dark:text-gray-400'>
+                                            Experienced in using Git for version control, enabling efficient collaboration and code management across projects.
+                                        </p>
+                                    </div>
+                                </div>
+                        </div>
                     </div>
                 </div>
-
-
             </div>
-
+              <div className='mt-20 text-center text-gray-600 dark:text-gray-400'>
+                  <p>&copy; 2024 Wasim Akram. All rights reserved.</p>
+                   <p className='mt-2'>Designed and Developed by Wasim Akram</p>
+              </div>
           </div>
       </div>
   );
