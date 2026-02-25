@@ -12,7 +12,7 @@ function TopBar({children}: { children: ReactNode }) {
                     <NavLink href={'/experience'} text={'Experience'}/>
                     <NavLink href={'/projects'} text={'Projects'}/>
                     <NavLink href={'/contact'} text={'Contact'}/>
-                    <NavLink href={'/blogs'} text={'Blogs'}/>
+                    <NavLink href={'/blog'} text={'Blogs'}/>
                 </div>
             </div>
             {children}
