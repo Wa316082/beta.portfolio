@@ -1,13 +1,21 @@
+'use client';
 import React from 'react';
-import {FaXTwitter} from "react-icons/fa6";
+import {FaGithub} from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/dist/client/link";
 import {CiLinkedin} from "react-icons/ci";
 import {FaFacebookF} from "react-icons/fa";
 import {LuInstagram} from "react-icons/lu";
 import {IoIosArrowRoundForward} from "react-icons/io";
-
 function Aside() {
+    const handleDownload = () => {
+        const link = document.createElement("a");
+        link.href = "/wasim-akram-cv.pdf";
+        link.download = "wasim-akram-cv.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
     return (
         <div className='lg:col-span-3 sm:col-span-5 col-span-11 rounded-lg overflow-hidden lg:sticky lg:top-20 lg:self-start p-0.5'>
             <div className='relative'>
@@ -27,11 +35,11 @@ function Aside() {
                     </div>
                     <div className='bg-linear-to-br from-gray-50 to-transparent dark:from-[#010D16] dark:to-transparent rounded-lg mt-4 p-4 text-center'>
                         <p className='text-gray-600 dark:text-gray-400 mb-2'>Email: wasimakram316082@gmail.com</p>
-                        <p className='text-gray-600 dark:text-gray-400 mb-2'>Phone: +880 1234567890</p>
+                        <p className='text-gray-600 dark:text-gray-400 mb-2'>Phone: +880 1819-237267</p>
                     </div>
                     <div className='flex items-center justify-center gap-4 mt-4'>
                         <Link
-                            href="https://www.linkedin.com/in/wasim-akram-316082/"
+                            href="https://www.linkedin.com/in/wasim-akram-ak"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="relative overflow-hidden rounded-full p-3 text-lg custom-shadow  transition-colors duration-300 text-gray-800 dark:text-gray-200 hover:text-white dark:hover:text-gray-100
@@ -43,7 +51,7 @@ function Aside() {
                             <span className="relative z-10"><CiLinkedin /></span>
                         </Link>
                         <Link
-                            href="https://www.linkedin.com/in/wasim-akram-316082/"
+                            href="https://www.facebook.com/md.wasim.akram.24"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="relative overflow-hidden rounded-full p-3 text-lg custom-shadow  transition-colors duration-300 text-gray-800 dark:text-gray-200 hover:text-white dark:hover:text-gray-100
@@ -55,7 +63,7 @@ function Aside() {
                             <span className="relative z-10"><FaFacebookF /></span>
                         </Link>
                         <Link
-                            href="https://www.linkedin.com/in/wasim-akram-316082/"
+                            href="https://www.instagram.com/wasimakram6032?igsh=NWp3dWVnbW42aWx0"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="relative overflow-hidden rounded-full p-3 text-lg custom-shadow  transition-colors duration-300 text-gray-800 dark:text-gray-200 hover:text-white dark:hover:text-gray-100
@@ -67,7 +75,7 @@ function Aside() {
                             <span className="relative z-10"><LuInstagram /></span>
                         </Link>
                         <Link
-                            href="https://www.linkedin.com/in/wasim-akram-316082/"
+                            href="https://github.com/Wa316082"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="relative overflow-hidden rounded-full p-3 text-lg custom-shadow  transition-colors duration-300 text-gray-800 dark:text-gray-200 hover:text-white dark:hover:text-gray-100
@@ -76,13 +84,14 @@ function Aside() {
                                  before:bg-linear-315 before:from-[#13fdfd] before:to-[#139bfd]
                                  before:transform before:scale-0 before:origin-center before:transition-transform before:duration-500 hover:before:scale-100"
                         >
-                            <span className="relative z-10"><FaXTwitter /></span>
+                            <span className="relative z-10"><FaGithub /></span>
                         </Link>
                     </div>
                     <div className='flex items-center justify-center mt-6'>
                         <button
                             aria-label="Download Resume"
                             className="relative overflow-hidden cursor-pointer rounded-full p-0.5 custom-shadow"
+                            onClick={handleDownload}
                         >
                             <div className="round-animation-2 absolute inset-0 h-10 w-10 bg-linear-90 from-sky-500 to-teal-400 blur-lg opacity-90"/>
                             <div className='relative rounded-full px-6 py-3 text-gray-800 dark:text-gray-200 hover:text-white transition-colors duration-300 group focus:outline-none border border-gray-200 hover:border-cyan-500 dark:border-gray-800 dark:hover:border-cyan-500 bg-linear-130 from-[#e2e8ec] to-[#ffffff] dark:from-[#010D16] dark:to-[#052B48]'>
